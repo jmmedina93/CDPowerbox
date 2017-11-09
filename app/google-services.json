@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "370057341468",
+    "firebase_url": "https://cdpowerbox.firebaseio.com",
+    "project_id": "cdpowerbox",
+    "storage_bucket": "cdpowerbox.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:370057341468:android:c73d301fb3f43ac5",
+        "android_client_info": {
+          "package_name": "com.example.jmmed.cdpowertbox.CDPowertBox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "370057341468-l9mir4m0fi7i3gart0nar8kf23c9h90b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM6yx6nTnrLnmC6hyUFVzbT8-IPFquu10"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
