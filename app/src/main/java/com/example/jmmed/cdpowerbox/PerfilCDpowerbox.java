@@ -35,7 +35,6 @@ public class PerfilCDpowerbox extends AppCompatActivity {
 
         txtsesion = (TextView) findViewById(R.id.txt_sesion);
         usuarioCabecera.setText(user.getEmail());
-        txtsesion.setText("Bienvenido " + user.getEmail() );
         botonSalir = (Button) header.findViewById(R.id.boton_salir);
 
         botonSalir.setOnClickListener(new View.OnClickListener() {

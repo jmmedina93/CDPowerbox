@@ -52,7 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/txt_signinup"
-            android:text="Si no tienes cuenta, reguistrate Aqui"/>
+            android:text="Si no tienes cuenta, reguistrate AQUI"/>
 
     </LinearLayout>
 </RelativeLayout>
