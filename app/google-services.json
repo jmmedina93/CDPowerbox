@@ -8,12 +8,20 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:370057341468:android:c73d301fb3f43ac5",
+        "mobilesdk_app_id": "1:370057341468:android:7b2d4efca9bb42c6",
         "android_client_info": {
-          "package_name": "com.example.jmmed.cdpowertbox.CDPowertBox"
+          "package_name": "com.example.jmmed.cdpowerbox"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "370057341468-037a834l7ri3csbpea1k347s4f66as4v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.jmmed.cdpowerbox",
+            "certificate_hash": "afc446ef4680fea591f9f01a85844430c3c141b3"
+          }
+        },
         {
           "client_id": "370057341468-l9mir4m0fi7i3gart0nar8kf23c9h90b.apps.googleusercontent.com",
           "client_type": 3
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "370057341468-l9mir4m0fi7i3gart0nar8kf23c9h90b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

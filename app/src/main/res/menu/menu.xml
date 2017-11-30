@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/inicio"
+
+            android:title="Inicio"/>
+        <item
+            android:id="@+id/como_funciona"
+
+            android:title="como funciona"/>
+        <item
+            android:id="@+id/datos_personales"
+
+            android:title="datos personales"/>
+        <item
+            android:id="@+id/mis_reservas"
+
+            android:title="mis reservas"/>
+        <item
+            android:id="@+id/reservar"
+
+            android:title="reservar"/>
+    </group>
+</menu>

@@ -1,4 +1,4 @@
-package com.example.jmmed.cdpowertbox;
+package com.example.jmmed.cdpowerbox;
 
 import org.junit.Test;
 
