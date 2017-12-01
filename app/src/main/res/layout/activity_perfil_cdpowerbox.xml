@@ -32,7 +32,32 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/txt_sesion"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Has iniciado sesión"
+                android:text="Datos personales."
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtEmail"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtNombre"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtApellidos"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtTelefono"
+                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_gravity="center_horizontal"/>
 
         </LinearLayout>
