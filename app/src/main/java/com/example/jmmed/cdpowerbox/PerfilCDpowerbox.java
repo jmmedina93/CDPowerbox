@@ -6,6 +6,7 @@ import android.support.design.widget.NavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.jmmed.cdpowerbox.Objetos.FirebaseReferences;
@@ -22,14 +23,15 @@ public class PerfilCDpowerbox extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
     private TextView txtsesion;
-    private TextView txt_email;
-    private TextView txt_nombre;
-    private TextView txt_apellido;
-    private TextView txt_telefono;
+    private EditText edt_email;
+    private EditText edt_nombre;
+    private EditText edt_apellido;
+    private EditText edt_telefono;
     private NavigationView menu;
     private View header;
     private TextView usuarioCabecera;
     private Button botonSalir;
+    private Button btn_guardar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,23 +47,24 @@ public class PerfilCDpowerbox extends AppCompatActivity {
         menu = (NavigationView) findViewById(R.id.navview);
         header = menu.getHeaderView(0);
         usuarioCabecera = (TextView) header.findViewById(R.id.usuario_cabecera);
-
+        btn_guardar = (Button) findViewById(R.id.btnGuardar);
         txtsesion = (TextView) findViewById(R.id.txt_sesion);
-        txt_email = (TextView) findViewById(R.id.txtEmail);
-        txt_nombre = (TextView) findViewById(R.id.txtNombre);
-        txt_apellido = (TextView) findViewById(R.id.txtApellidos);
-        txt_telefono = (TextView) findViewById(R.id.txtTelefono);
+        edt_email = (EditText) findViewById(R.id.edtEmail);
+        edt_nombre = (EditText) findViewById(R.id.edtNombre);
+        edt_apellido = (EditText) findViewById(R.id.edtApellidos);
+        edt_telefono = (EditText) findViewById(R.id.edtTelefono);
         usuarioCabecera.setText(user.getEmail());
         botonSalir = (Button) header.findViewById(R.id.boton_salir);
 
         usuariosRef.child(FirebaseReferences.USUARIO).addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                Usuario usuario = dataSnapshot.getValue(Usuario.class);
-                txt_email.setText(usuario.getEmail());
-                txt_nombre.setText(usuario.getNombre());
-                txt_apellido.setText(usuario.getApellidos());
-                txt_telefono.setText(usuario.getTelefono());
+            public void onDataChange(final DataSnapshot dataSnapshot) {
+                final Usuario usuario = dataSnapshot.getValue(Usuario.class);
+                edt_email.setText(usuario.getEmail());
+                edt_nombre.setText(usuario.getNombre());
+                edt_apellido.setText(usuario.getApellidos());
+                edt_telefono.setText(usuario.getTelefono());
+
             }
 
             @Override
