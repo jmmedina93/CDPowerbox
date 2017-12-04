@@ -2,11 +2,10 @@ package com.example.jmmed.cdpowerbox;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -76,16 +75,16 @@ public class CDpowerbox extends AppCompatActivity implements View.OnClickListene
         progressDialog.show();
 
         firebaseAuth.createUserWithEmailAndPassword(user,pass)
-            .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()){
-                    FirebaseUser user = firebaseAuth.getCurrentUser();
-                }else{
-                    Toast.makeText(CDpowerbox.this, "No se a registrado con exito. Vuelva a intentarlo.",Toast.LENGTH_SHORT).show();
-                }
-                }
-            });
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()){
+                            FirebaseUser user = firebaseAuth.getCurrentUser();
+                        }else{
+                            Toast.makeText(CDpowerbox.this, "No se a registrado con exito. Vuelva a intentarlo.",Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
     }
 
 
