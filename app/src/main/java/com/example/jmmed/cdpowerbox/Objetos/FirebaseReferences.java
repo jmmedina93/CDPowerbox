@@ -5,6 +5,7 @@ package com.example.jmmed.cdpowerbox.Objetos;
  */
 
 public class FirebaseReferences {
+    final public static String CDPOWERBOX = "cdpowerbox";
     final public static String USUARIOS = "usuarios";
-    final public static String USUARIO = "usuario";
+    public static String USUARIO = "";
 }

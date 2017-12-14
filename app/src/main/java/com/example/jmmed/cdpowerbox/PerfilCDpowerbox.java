@@ -10,14 +10,10 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.jmmed.cdpowerbox.Objetos.FirebaseReferences;
-import com.example.jmmed.cdpowerbox.Objetos.Usuario;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 public class PerfilCDpowerbox extends AppCompatActivity {
 
@@ -61,14 +57,14 @@ public class PerfilCDpowerbox extends AppCompatActivity {
         ft=fm.beginTransaction();
         ft.replace(R.id.contenedor,new FragmentoPerfil());
         ft.commit();
-        usuariosRef.child(FirebaseReferences.USUARIO).addValueEventListener(new ValueEventListener() {
+        /*usuariosRef.child(FirebaseReferences.USUARIO).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(final DataSnapshot dataSnapshot) {
                 final Usuario usuario = dataSnapshot.getValue(Usuario.class);
                 /*edt_email.setText(usuario.getEmail());
                 edt_nombre.setText(usuario.getNombre());
                 edt_apellido.setText(usuario.getApellidos());
-                edt_telefono.setText(usuario.getTelefono());*/
+                edt_telefono.setText(usuario.getTelefono());
 
             }
 
@@ -76,7 +72,7 @@ public class PerfilCDpowerbox extends AppCompatActivity {
             public void onCancelled(DatabaseError databaseError) {
 
             }
-        });
+        });*/
 
         botonSalir.setOnClickListener(new View.OnClickListener() {
             @Override

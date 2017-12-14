@@ -3,6 +3,7 @@ package com.example.jmmed.cdpowerbox;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,22 +47,31 @@ public class FragmentoPerfil extends Fragment{
         edt_telefono = (EditText) view.findViewById(R.id.edtTelefono);
 
         firebaseAuth = FirebaseAuth.getInstance();
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference usuariosRef = database.getReference(FirebaseReferences.USUARIOS);
-        FirebaseUser user = firebaseAuth.getCurrentUser();
+        final FirebaseDatabase database = FirebaseDatabase.getInstance();
+        final DatabaseReference usuariosRef = database.getReference(FirebaseReferences.USUARIOS);
+        final FirebaseUser user = firebaseAuth.getCurrentUser();
         NavigationView menu = (NavigationView) getActivity().findViewById(R.id.navview);
         View header = menu.getHeaderView(0);
         usuarioCabecera = (TextView) header.findViewById(R.id.usuario_cabecera);
         usuarioCabecera.setText(user.getEmail());
+        FirebaseReferences.USUARIO=user.getEmail().toString().split("@")[0];
+        Log.v("prueba", FirebaseReferences.USUARIO );
         usuariosRef.child(FirebaseReferences.USUARIO).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(final DataSnapshot dataSnapshot) {
                 final Usuario usuario = dataSnapshot.getValue(Usuario.class);
-                edt_email.setText(usuario.getEmail());
-                edt_nombre.setText(usuario.getNombre());
-                edt_apellido.setText(usuario.getApellidos());
-                edt_telefono.setText(usuario.getTelefono());
-
+               // Log.v("prueba", usuario.toString() );
+                if (usuario!=null) {
+                    edt_email.setText(usuario.getEmail());
+                    edt_nombre.setText(usuario.getNombre());
+                    edt_apellido.setText(usuario.getApellidos());
+                    edt_telefono.setText(usuario.getTelefono());
+                }else{
+                    usuariosRef.child(user.getEmail().split("@")[0]).child("email").setValue(user.getEmail());
+                    usuariosRef.child(user.getEmail().split("@")[0]).child("nombre").setValue("");
+                    usuariosRef.child(user.getEmail().split("@")[0]).child("apellidos").setValue("");
+                    usuariosRef.child(user.getEmail().split("@")[0]).child("telefono").setValue("");
+                }
             }
 
             @Override
@@ -69,7 +79,19 @@ public class FragmentoPerfil extends Fragment{
 
             }
         });
-
+        btn_guardar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Usuario usuario = new Usuario();
+                usuario.setNombre(edt_nombre.getText().toString());
+                usuario.setEmail(user.getEmail().toString());
+                usuario.setApellidos(edt_apellido.getText().toString());
+                usuario.setTelefono(edt_telefono.getText().toString());
+                usuariosRef.child(usuario.getEmail().split("@")[0]).child("nombre").setValue(usuario.getNombre());
+                usuariosRef.child(usuario.getEmail().split("@")[0]).child("apellidos").setValue(usuario.getApellidos());
+                usuariosRef.child(usuario.getEmail().split("@")[0]).child("telefono").setValue(usuario.getTelefono());
+            }
+        });
 
         return view;
     }
