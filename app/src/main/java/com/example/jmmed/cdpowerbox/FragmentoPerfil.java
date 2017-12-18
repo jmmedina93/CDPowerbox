@@ -21,9 +21,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-/**
- * Created by david on 4/12/17.
- */
 
 public class FragmentoPerfil extends Fragment{
     private FirebaseAuth firebaseAuth;
