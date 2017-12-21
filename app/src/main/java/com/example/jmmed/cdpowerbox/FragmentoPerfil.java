@@ -3,6 +3,8 @@ package com.example.jmmed.cdpowerbox;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,6 +33,8 @@ public class FragmentoPerfil extends Fragment{
     private EditText edt_telefono;
     private TextView usuarioCabecera;
     private Button btn_guardar;
+    private FragmentManager fm;
+    private FragmentTransaction ft;
 
 
     @Override
@@ -57,7 +61,6 @@ public class FragmentoPerfil extends Fragment{
             @Override
             public void onDataChange(final DataSnapshot dataSnapshot) {
                 final Usuario usuario = dataSnapshot.getValue(Usuario.class);
-               // Log.v("prueba", usuario.toString() );
                 if (usuario!=null) {
                     edt_email.setText(usuario.getEmail());
                     edt_nombre.setText(usuario.getNombre());

@@ -20,16 +20,9 @@ import com.google.firebase.database.FirebaseDatabase;
 public class PerfilCDpowerbox extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
-    /*private TextView txtsesion;
-    private EditText edt_email;
-    private EditText edt_nombre;
-    private EditText edt_apellido;
-    private EditText edt_telefono;*/
     private NavigationView menu;
     private View header;
-    //private TextView usuarioCabecera;
     private Button botonSalir;
-    //private Button btn_guardar;
     private FragmentManager fm;
     private FragmentTransaction ft;
 
@@ -55,6 +48,11 @@ public class PerfilCDpowerbox extends AppCompatActivity {
                         ft.addToBackStack("fragmento");
                         ft.replace(R.id.contenedor, new FragmentoReserva());
                         break;
+                    case "datos_personales":
+                        ft = fm.beginTransaction();
+                        ft.addToBackStack("fragmento");
+                        ft.replace(R.id.contenedor, new FragmentoReserva());
+                        break;
                     default:
                         return true;
                 }
@@ -69,22 +67,6 @@ public class PerfilCDpowerbox extends AppCompatActivity {
         ft=fm.beginTransaction();
         ft.replace(R.id.contenedor,new FragmentoPerfil());
         ft.commit();
-        /*usuariosRef.child(FirebaseReferences.USUARIO).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(final DataSnapshot dataSnapshot) {
-                final Usuario usuario = dataSnapshot.getValue(Usuario.class);
-                /*edt_email.setText(usuario.getEmail());
-                edt_nombre.setText(usuario.getNombre());
-                edt_apellido.setText(usuario.getApellidos());
-                edt_telefono.setText(usuario.getTelefono());
-
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });*/
 
         botonSalir.setOnClickListener(new View.OnClickListener() {
             @Override
