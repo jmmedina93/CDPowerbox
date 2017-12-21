@@ -3,22 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/holo_green_light"
     tools:context="com.example.jmmed.cdpowerbox.CDpowerbox">
 
     <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/txt_init"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_gravity="center_horizontal"
-            android:text="Regístrate" />
+            android:text="Regístrate"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <EditText
             android:id="@+id/login_admin"
@@ -42,15 +43,16 @@
             android:id="@+id/btn_login"
             android:layout_width="206dp"
             android:layout_height="46dp"
+            android:background="@android:color/holo_orange_light"
             android:text="Registrate"
             tools:layout_editor_absoluteX="276dp"
             tools:layout_editor_absoluteY="402dp" />
 
         <TextView
+            android:id="@+id/txt_signnin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/txt_signnin"
-            android:text="Si ya estas registrado. INICIA SESION."/>
+            android:text="Si ya estas registrado. INICIA SESION." />
 
     </LinearLayout>
 </RelativeLayout>

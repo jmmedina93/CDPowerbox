@@ -43,15 +43,26 @@ public class PerfilCDpowerbox extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getTitle().toString()) {
-                    case "reservar":
+
+                    case "Como Funciona":
+                        ft = fm.beginTransaction();
+                        ft.addToBackStack("fragmento");
+                        ft.replace(R.id.contenedor, new FragmentoComoFunciona());
+                        break;
+                    case "Reservar":
                         ft = fm.beginTransaction();
                         ft.addToBackStack("fragmento");
                         ft.replace(R.id.contenedor, new FragmentoReserva());
                         break;
-                    case "datos_personales":
+                    case "Datos Personales":
                         ft = fm.beginTransaction();
                         ft.addToBackStack("fragmento");
-                        ft.replace(R.id.contenedor, new FragmentoReserva());
+                        ft.replace(R.id.contenedor, new FragmentoPerfil());
+                        break;
+                    case "Inicio":
+                        ft = fm.beginTransaction();
+                        ft.addToBackStack("fragmento");
+                        ft.replace(R.id.contenedor, new FragmentoInicio());
                         break;
                     default:
                         return true;
@@ -65,7 +76,7 @@ public class PerfilCDpowerbox extends AppCompatActivity {
         botonSalir = (Button) header.findViewById(R.id.boton_salir);
         fm=getSupportFragmentManager();
         ft=fm.beginTransaction();
-        ft.replace(R.id.contenedor,new FragmentoPerfil());
+        ft.replace(R.id.contenedor,new FragmentoInicio());
         ft.commit();
 
         botonSalir.setOnClickListener(new View.OnClickListener() {

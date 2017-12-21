@@ -8,14 +8,14 @@
         <item
             android:id="@+id/como_funciona"
 
-            android:title="como funciona"/>
+            android:title="Como Funciona"/>
         <item
             android:id="@+id/datos_personales"
 
-            android:title="datos personales"/>
+            android:title="Datos Personales"/>
         <item
             android:id="@+id/reservar"
 
-            android:title="reservar"/>
+            android:title="Reservar"/>
     </group>
 </menu>

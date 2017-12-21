@@ -3,8 +3,6 @@ package com.example.jmmed.cdpowerbox;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,8 +31,6 @@ public class FragmentoPerfil extends Fragment{
     private EditText edt_telefono;
     private TextView usuarioCabecera;
     private Button btn_guardar;
-    private FragmentManager fm;
-    private FragmentTransaction ft;
 
 
     @Override

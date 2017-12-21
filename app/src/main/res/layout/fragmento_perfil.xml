@@ -3,10 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="@android:color/holo_green_light"
     android:layout_centerHorizontal="true"
-    android:layout_centerVertical="true"
-    >
+    android:layout_centerVertical="true">
 
     <TextView
         android:layout_width="wrap_content"
@@ -16,6 +15,13 @@
         android:text="Datos personales."
         android:layout_gravity="center_horizontal"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtEmail"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Correo:"
+        android:textSize="15dp"/>
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -23,18 +29,39 @@
         android:enabled="false"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_gravity="center_horizontal"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtNombre"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Nombre:"
+        android:textSize="15dp"/>
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/edtNombre"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_gravity="center_horizontal"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtApellidos"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Apellidos:"
+        android:textSize="15dp"/>
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/edtApellidos"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_gravity="center_horizontal"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtTelefono"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Telefono:"
+        android:textSize="15dp"/>
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -44,8 +71,10 @@
 
     <Button
         android:id="@+id/btnGuardar"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@android:color/holo_orange_light"
         android:text="Guardar" />
 
 </LinearLayout>
