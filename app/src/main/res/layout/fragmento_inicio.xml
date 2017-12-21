@@ -15,8 +15,10 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:gravity="center"
+            android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="20dp"
-            android:text="Bienvenida y horarios"/>
+            android:text="Bienvenido a CDPowerbox, en nuestras instalaciones podras encontrar las mejores calidades en pistas.\n Esperemos que les sea de su agrado.
+                                Los horarios de apertura son: \n9:00 a 14:00 y 16:00 a 21:00"/>
 
 </LinearLayout>

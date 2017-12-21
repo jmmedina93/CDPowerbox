@@ -14,8 +14,8 @@
             android:layout_marginTop="150dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:gravity="center"
-            android:text="Pequeño resumen de como funciona la app"
+            android:textAlignment="center"
+            android:text="Para poder realizar una reserva en nuestra App hay que estar registrado.\n\n Una vez entremos en reservas elegimos la pista donde vamos a reservar.\n\n Si la hora esta reservada el boton de reserva estara deshabilitado igual que el de cancelar la reserva, que solo o tendra habilidado aquel usuario que tenga hecha la reserva."
             android:textColor="@android:color/black"
             android:textSize="20dp" />
 

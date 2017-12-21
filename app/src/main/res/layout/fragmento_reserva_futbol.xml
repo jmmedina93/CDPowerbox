@@ -6,7 +6,7 @@
     android:layout_centerHorizontal="true"
 
     android:layout_centerVertical="true"
-    android:background="@android:color/holo_green_dark"
+    android:background="@android:color/holo_green_light"
     android:orientation="vertical">
 
     <ScrollView
