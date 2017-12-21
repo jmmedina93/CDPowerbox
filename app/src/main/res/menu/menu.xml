@@ -14,10 +14,6 @@
 
             android:title="datos personales"/>
         <item
-            android:id="@+id/mis_reservas"
-
-            android:title="mis reservas"/>
-        <item
             android:id="@+id/reservar"
 
             android:title="reservar"/>

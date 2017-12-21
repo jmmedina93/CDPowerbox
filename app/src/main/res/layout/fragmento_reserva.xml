@@ -3,14 +3,28 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:layout_centerHorizontal="true"
-    android:layout_centerVertical="true"
-    >
+    android:layout_centerVertical="true">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""
-        android:id="@+id/texto_reserva"/>
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/boton_reserva_futbol"
+            android:text="pista futbol"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/boton_reserva_tenis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="pista tenis" />
+    </LinearLayout>
+
 </LinearLayout>
